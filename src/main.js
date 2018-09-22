@@ -24,14 +24,19 @@ Vue.use(Vuetify, {
 
 NProgress.configure({ showSpinner: false });
 router.beforeResolve((to, from, next) => {
-    if (to.name) {
-        NProgress.start();
-    }
+    NProgress.start();
+    next();
+})
+
+router.beforeResolve((to, from, next) => {
+    NProgress.start();
     next();
 });
   
 router.afterEach((to, from) => {
-    NProgress.done();
+    setTimeout(() => {
+        NProgress.done();
+    }, 250);
 });
 
         

@@ -25,7 +25,7 @@ export default new Router({
         },
         {
             path: '/page-two',
-            name: 'page-one',
+            name: 'page-two',
             component: () => import('./views/page-two.vue')
         }
     ]
