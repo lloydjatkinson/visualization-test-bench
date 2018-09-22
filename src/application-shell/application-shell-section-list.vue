@@ -34,6 +34,17 @@
                 <v-list-tile-title>Page One</v-list-tile-title>
             </v-list-tile-content>
         </v-list-tile>
+        
+        <v-list-tile 
+            :to="{ path: '/page-two' }" 
+            ripple>
+            <v-list-tile-action>
+                <v-icon>mdi-numeric</v-icon>
+            </v-list-tile-action>
+            <v-list-tile-content>
+                <v-list-tile-title>Page Two</v-list-tile-title>
+            </v-list-tile-content>
+        </v-list-tile>
 
         <v-divider />
 

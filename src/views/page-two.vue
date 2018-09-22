@@ -6,7 +6,7 @@
 export default {
     data () {
         return {
-            data: [{ "id": 1,"first_name": "Matias","last_name": "Colquhoun","email": "mcolquhoun0@chron.com","gender": "Male","ip_address": "5.42.62.20" },
+            test: [{ "id": 1,"first_name": "Matias","last_name": "Colquhoun","email": "mcolquhoun0@chron.com","gender": "Male","ip_address": "5.42.62.20" },
                 { "id": 2,"first_name": "Kassandra","last_name": "Skough","email": "kskough1@earthlink.net","gender": "Female","ip_address": "248.144.3.32" },
                 { "id": 3,"first_name": "Jacklin","last_name": "Wingrove","email": "jwingrove2@nbcnews.com","gender": "Female","ip_address": "49.219.184.170" },
                 { "id": 4,"first_name": "Ana","last_name": "Lupton","email": "alupton3@nhs.uk","gender": "Female","ip_address": "185.144.63.60" },

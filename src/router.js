@@ -22,6 +22,11 @@ export default new Router({
             path: '/basic-colour-scales',
             name: 'basic-colour-scales',
             component: () => import('./views/basic-colour-scales.vue')
+        },
+        {
+            path: '/page-two',
+            name: 'page-one',
+            component: () => import('./views/page-two.vue')
         }
     ]
 });
