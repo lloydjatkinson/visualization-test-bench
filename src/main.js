@@ -14,8 +14,6 @@ Vue.use(Vuetify, {
 });
 
 
-
-
 // Vue.config.errorHandler = (error, vm, info) => {
 //     console.warn('Oops.');
 // };
@@ -30,7 +28,7 @@ router.beforeResolve((to, from, next) => {
         NProgress.start();
     }
     next();
-})
+});
   
 router.afterEach((to, from) => {
     NProgress.done();
