@@ -1,6 +1,14 @@
 import {
-    NAVIGATION_DRAWER_HIDE,
-    NAVIGATION_DRAWER_SHOW,
+    SET_TOP_INDICATOR_ACTIVE,
+    CLEAR_TOP_INDICATOR_ACTIVE,
+    
+    SET_TOP_INDICATOR_VALUE,
+
+    SET_TOP_INDICATOR_TRICKLE,
+    CLEAR_TOP_INDICATOR_TRICKLE,
+
+    NAVIGATION_DRAWER_COLLAPSE,
+    NAVIGATION_DRAWER_EXPAND,
 
     UPDATE_FOOTER_MESSAGE,
 
@@ -10,13 +18,49 @@ import {
     CLEAR_WARNING_CONDITION
 } from './application-shell-mutation-types.js';
 
-const navigationBar = {
-    [NAVIGATION_DRAWER_HIDE] (state) {
-        state.navigationDrawerVisible = false;
+
+const topIndicator = {
+    [SET_TOP_INDICATOR_ACTIVE] (state) {
+        state.indication.active = true;
     },
     
-    [NAVIGATION_DRAWER_SHOW] (state) {
-        state.navigationDrawerVisible = true;
+    [CLEAR_TOP_INDICATOR_ACTIVE] (state) {
+        state.indication.value = 0;
+        state.indication.active = false;
+        state.indication.trickle = false;
+    },
+
+    [SET_TOP_INDICATOR_VALUE] (state, { value }) {
+        if (value === 1) {
+            state.indication.value = 0;
+            state.indication.active = false;
+            state.indication.trickle = false;
+        } else {
+            state.indication.value = value;
+        }
+        state.indication.active = true;
+        state.indication.trickle = false;
+    },
+
+    [SET_TOP_INDICATOR_TRICKLE] (state) {
+        state.indication.active = true;
+        state.indication.trickle = true;
+    },
+    
+    [CLEAR_TOP_INDICATOR_TRICKLE] (state) {
+        state.indication.value = 0;
+        state.indication.active = false;
+        state.indication.trickle = false;
+    }
+};
+
+const navigationBar = {
+    [NAVIGATION_DRAWER_COLLAPSE] (state) {
+        state.navigationDrawerActive = false;
+    },
+    
+    [NAVIGATION_DRAWER_EXPAND] (state) {
+        state.navigationDrawerActive = true;
     },
     
     [UPDATE_FOOTER_MESSAGE] (state, { message }) {
@@ -52,6 +96,7 @@ const errorState = {
 
 const mutations = {
     ...navigationBar,
+    ...topIndicator,
     ...toolbar,
     ...errorState
 };

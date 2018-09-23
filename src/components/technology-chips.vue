@@ -1,5 +1,5 @@
 <template>
-    <div class="pb-2">
+    <div>
         <v-chip
             v-for="item in mappedIcons"
             :key="item.icon">
@@ -14,7 +14,7 @@ const technologyIconMap = new Map([
     [ 'js', { name: 'Javascript', icon: 'mdi-language-javascript', colour: '#F7DF1E' }],
     [ 'vuejs', { name: 'Vue.js', icon: 'mdi-vuejs', colour: '#42B883' }],
     [ 'chromajs', { name: 'Chroma.js', icon: 'mdi-palette', colour: '#ff3399' } ],
-    [ 'd3', { name: 'D3.js', icon: 'chart-scatterplot-hexbin', colour: '#F68849' }],
+    [ 'd3', { name: 'D3.js', icon: 'mdi-chart-scatterplot-hexbin', colour: '#F68849' }],
     [ 'about', { name: 'About', icon: 'dictionary' }]
 ]);
 

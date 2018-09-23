@@ -1,5 +1,5 @@
 const state = {
-    navigationDrawerVisible: false,
+    navigationDrawerActive: false,
     footerMessage: 'Lloyd Atkinson 2018',
     errorCondition: {
         exists: false,
@@ -8,6 +8,11 @@ const state = {
     warningCondition: {
         exists: false,
         details: 'Something went wrong.',
+    },
+    indication: {
+        active: false,
+        value: 0,
+        trickle: false
     }
 };
 

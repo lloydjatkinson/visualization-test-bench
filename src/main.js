@@ -1,5 +1,5 @@
-import Vue from 'vue';
 import NProgress from 'nprogress';
+import Vue from 'vue';
 import Vuetify from 'vuetify';
 import 'vuetify/dist/vuetify.min.css';
 import '@mdi/font/css/materialdesignicons.css';
@@ -13,6 +13,8 @@ Vue.use(Vuetify, {
     iconfont: 'mdi'
 });
 
+// import { integrate } from './router-navigation-store-integration.js';
+// integrate(router, store);
 
 // Vue.config.errorHandler = (error, vm, info) => {
 //     console.warn('Oops.');
@@ -21,24 +23,17 @@ Vue.use(Vuetify, {
 // Vue.config.warnHandler = (message, vm, trace) => {
 //     console.warn('More oops.');
 // };
-
-NProgress.configure({ showSpinner: false });
-router.beforeResolve((to, from, next) => {
-    NProgress.start();
-    next();
-})
-
+// eslint-disable-next-line
 router.beforeResolve((to, from, next) => {
     NProgress.start();
     next();
 });
   
-router.afterEach((to, from) => {
+router.afterEach(() => {
     setTimeout(() => {
         NProgress.done();
-    }, 250);
+    }, 150);
 });
-
         
 Vue.config.productionTip = false;
 new Vue({

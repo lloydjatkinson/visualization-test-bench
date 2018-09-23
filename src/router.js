@@ -27,6 +27,11 @@ export default new Router({
             path: '/page-two',
             name: 'page-two',
             component: () => import('./views/page-two.vue')
+        },
+        {
+            path: '/d3-basic-bar-chart',
+            name: 'd3-basic-bar-chart',
+            component: () => import('./views/d3-basic-bar-chart.vue')
         }
     ]
 });

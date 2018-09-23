@@ -4,6 +4,11 @@
 
 <script>
 export default {
+    name: 'PageOne',
+    data () {
+        return {
 
+        };
+    }
 };
 </script>

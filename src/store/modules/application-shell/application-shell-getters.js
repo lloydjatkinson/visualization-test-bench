@@ -1,5 +1,6 @@
 const getters = {
-    navigationDrawerVisible: state => state.navigationDrawerVisible,
+    navigationDrawerActive: state => state.navigationDrawerActive,
+    topIndicator: state => state.indication,
     footerMessage: state => state.footerMessage,
     errorCondition: state => state.errorCondition,
     warningCondition: state => state.warningCondition

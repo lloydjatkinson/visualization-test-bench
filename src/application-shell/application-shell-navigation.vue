@@ -1,6 +1,6 @@
 <template>
     <v-navigation-drawer
-        :value="navigationDrawerVisible"
+        :value="navigationDrawerActive"
         :clipped="$vuetify.breakpoint.mdAndUp"
         app
         @input="syncCollapseStateWithStore">
@@ -19,7 +19,7 @@ export default {
     },
     computed: {
         ...mapGetters('applicationShellModule', [
-            'navigationDrawerVisible'
+            'navigationDrawerActive'
         ]),
     },
     methods: {
