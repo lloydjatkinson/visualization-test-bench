@@ -1,11 +1,9 @@
 <template>
-
     <v-alert
         :value="true"
         :type="alertType">
         {{ details }}
     </v-alert>
-
 </template>
 
 <script>
