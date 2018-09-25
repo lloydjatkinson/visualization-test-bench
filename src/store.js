@@ -1,6 +1,6 @@
 import Vue from 'vue';
 import Vuex from 'vuex';
-import applicationShellModule from './store/modules/application-shell/application-shell-module.js';
+import applicationShellModule from './application-shell/store/application-shell-module.js';
 
 Vue.use(Vuex);
 

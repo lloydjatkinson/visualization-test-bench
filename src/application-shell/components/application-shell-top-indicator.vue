@@ -5,7 +5,7 @@
 <script>
 import { mapGetters } from 'vuex';
 import NProgress from 'nprogress';
-import '../../node_modules/nprogress/nprogress.css';
+import '../../../node_modules/nprogress/nprogress.css';
 
 NProgress.configure({ showSpinner: false });
 
