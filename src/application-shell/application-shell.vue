@@ -1,5 +1,6 @@
 <template>
     <v-app :dark="dark">
+        <!-- <application-shell-snackbar /> -->
         <application-shell-top-indicator />
         <application-shell-navigation />
         <application-shell-toolbar />
@@ -9,6 +10,7 @@
 </template>
 
 <script>
+import ApplicationShellSnackbar from './application-shell-snackbar.vue';
 import ApplicationShellTopIndicator from './application-shell-top-indicator.vue';
 import ApplicationShellNavigation from './application-shell-navigation.vue';
 import ApplicationShellSectionList from './application-shell-section-list.vue';
@@ -19,6 +21,7 @@ import ApplicationShellFooter from './application-shell-footer.vue';
 export default {
     name: 'ApplicationShell',
     components: {
+        ApplicationShellSnackbar,
         ApplicationShellTopIndicator,
         ApplicationShellNavigation,
         ApplicationShellSectionList,

@@ -9,9 +9,13 @@ import ApplicationShell from './application-shell/application-shell.vue';
 import store from './store.js';
 import router from './router.js';
 
+import SectionHeader from './components/section-header.vue';
+Vue.component('section-header', SectionHeader);
+
 Vue.use(Vuetify, {
     iconfont: 'mdi'
 });
+
 
 // import { integrate } from './router-navigation-store-integration.js';
 // integrate(router, store);

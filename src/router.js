@@ -1,6 +1,6 @@
 import Vue from 'vue';
 import Router from 'vue-router';
-import Home from './views/home.vue';
+import Home from './sections/home/home.vue';
 
 Vue.use(Router);
 
@@ -16,22 +16,22 @@ export default new Router({
         {
             path: '/page-one',
             name: 'page-one',
-            component: () => import('./views/page-one.vue')
-        },
-        {
-            path: '/basic-colour-scales',
-            name: 'basic-colour-scales',
-            component: () => import('./views/basic-colour-scales.vue')
+            component: () => import('./sections/page-one.vue')
         },
         {
             path: '/page-two',
             name: 'page-two',
-            component: () => import('./views/page-two.vue')
+            component: () => import('./sections/page-two.vue')
         },
+        // {
+        //     path: '/basic-colour-scales',
+        //     name: 'basic-colour-scales',
+        //     component: () => import('./sections/basic-colour-scales/basic-colour-scales.vue')
+        // },
         {
             path: '/d3-basic-bar-chart',
             name: 'd3-basic-bar-chart',
-            component: () => import('./views/d3-basic-bar-chart.vue')
+            component: () => import('./sections/d3-basic-bar-charts/d3-basic-bar-charts.vue')
         }
     ]
 });
