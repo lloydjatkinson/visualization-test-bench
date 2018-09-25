@@ -1,4 +1,10 @@
 import {
+    SNACKBAR_EXPAND,
+    SNACKBAR_COLLAPSE,
+    SNACKBAR_MESSAGE,
+    SNACKBAR_DISMISS_TEXT,
+    SNACKBAR_TIMEOUT,
+
     SET_TOP_INDICATOR_ACTIVE,
     CLEAR_TOP_INDICATOR_ACTIVE,
     
@@ -18,6 +24,27 @@ import {
     CLEAR_WARNING_CONDITION
 } from './application-shell-mutation-types.js';
 
+const snackbar = {
+    [SNACKBAR_EXPAND] (state) {
+        state.snackbar.expanded = true;
+    },
+
+    [SNACKBAR_COLLAPSE] (state) {
+        state.snackbar.expanded = false;
+    },
+
+    [SNACKBAR_MESSAGE] (state, { message }) {
+        state.snackbar.message = message;
+    },
+
+    [SNACKBAR_DISMISS_TEXT] (state, { dismissText }) {
+        state.snackbar.dismissText = dismissText;
+    },
+
+    [SNACKBAR_TIMEOUT] (state, { timeout }) {
+        state.snackbar.timeout = timeout;
+    }
+};
 
 const topIndicator = {
     [SET_TOP_INDICATOR_ACTIVE] (state) {
@@ -95,8 +122,9 @@ const errorState = {
 };
 
 const mutations = {
-    ...navigationBar,
+    ...snackbar,
     ...topIndicator,
+    ...navigationBar,
     ...toolbar,
     ...errorState
 };

@@ -9,6 +9,12 @@ const state = {
         exists: false,
         details: 'Something went wrong.',
     },
+    snackbar: {
+        expanded: false,
+        message: '',
+        timeout: 3000,
+        dismissText: 'Close'
+    },
     indication: {
         active: false,
         value: 0,

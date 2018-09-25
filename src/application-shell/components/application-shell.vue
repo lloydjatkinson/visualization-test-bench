@@ -1,6 +1,6 @@
 <template>
     <v-app :dark="dark">
-        <!-- <application-shell-snackbar /> -->
+        <application-shell-snackbar />
         <application-shell-top-indicator />
         <application-shell-navigation />
         <application-shell-toolbar />

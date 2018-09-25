@@ -1,4 +1,10 @@
-import {   
+import {
+    SNACKBAR_EXPAND,
+    SNACKBAR_COLLAPSE,
+    SNACKBAR_MESSAGE,
+    SNACKBAR_DISMISS_TEXT,
+    SNACKBAR_TIMEOUT,
+
     SET_TOP_INDICATOR_ACTIVE,
     CLEAR_TOP_INDICATOR_ACTIVE,
     
@@ -19,6 +25,22 @@ import {
 } from './application-shell-mutation-types.js';
 
 const actions = {
+    showSnackbar ({ commit, state }, { message }) {
+        commit(SNACKBAR_MESSAGE, { message });
+        commit(SNACKBAR_EXPAND);
+
+        setTimeout(() => {
+            // Prevent needless mutation if user has already dismissed snackbar.
+            if (state.snackbar.expanded) {
+                commit(SNACKBAR_COLLAPSE);
+            }
+        }, state.snackbar.timeout);
+    },
+
+    dismissSnackbar ({ commit }) {
+        commit(SNACKBAR_COLLAPSE);
+    },
+
     topIndicatorSetActive ({ commit }) {
         commit(SET_TOP_INDICATOR_ACTIVE);
     },
