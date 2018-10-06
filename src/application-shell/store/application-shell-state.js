@@ -12,7 +12,7 @@ const state = {
     snackbar: {
         expanded: false,
         message: '',
-        timeout: 3000,
+        timeout: 5000,
         dismissText: 'Close'
     },
     indication: {

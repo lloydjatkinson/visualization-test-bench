@@ -25,7 +25,13 @@ import {
 } from './application-shell-mutation-types.js';
 
 const actions = {
-    showSnackbar ({ commit, state }, { message }) {
+    showSnackbar ({ commit, state }, { message, dismissText, timeout }) {
+        if (state.snackbar.expanded) {
+            commit(SNACKBAR_COLLAPSE);
+
+            return;
+        }
+        
         commit(SNACKBAR_MESSAGE, { message });
         commit(SNACKBAR_EXPAND);
 

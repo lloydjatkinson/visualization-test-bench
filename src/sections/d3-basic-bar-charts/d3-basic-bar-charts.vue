@@ -1,82 +1,72 @@
 <template>
-    <div>
-        <section-header
-            :title="'Basic Bar Charts with D3'"
-            :technologies="['js', 'vuejs', 'd3']" />
+    <v-container 
+        grid-list-md
+        fluid>
         <v-layout
             row
             wrap>
-            <v-flex xs12>
-                <div 
-                    ref="chart" 
-                    class="chart" />
+            <section-header
+                :title="'Basic Bar Charts with D3'"
+                :technologies="['js', 'vuejs', 'd3']"/>
+        </v-layout>
+        <v-layout 
+            row
+            wrap>
+            <v-flex 
+                xs12
+                md6>
+                <v-card
+                    height="300">
+                    <v-card-text>xs4</v-card-text>
+                    <d3-bar-chart :series="series" />
+                </v-card>
             </v-flex>
-            <v-flex>
-                <v-card>
-                    <v-container
-                        fill-height
-                        fluid
-                        pa-2>
-                        <v-layout fill-height>
-                            <v-flex 
-                                xs12 
-                                align-end 
-                                flexbox>
-                                <span 
-                                    class="headline" 
-                                    v-text="'card.title'"/>
-                            </v-flex>
-                        </v-layout>
-                    </v-container>
-
-                    <v-card-actions>
-                        <v-spacer/>
-                        <v-btn icon>
-                            <v-icon>mdi-favorite</v-icon>
-                        </v-btn>
-                        <v-btn icon>
-                            <v-icon>mdi-bookmark</v-icon>
-                        </v-btn>
-                        <v-btn icon>
-                            <v-icon>mdi-share</v-icon>
-                        </v-btn>
-                    </v-card-actions>
+            <v-flex
+                xs12
+                md6>
+                <v-card
+                    height="300">
+                    <v-card-text>xs4</v-card-text>
                 </v-card>
             </v-flex>
         </v-layout>
-    </div>
+        <v-layout 
+            row
+            wrap>
+            <v-flex 
+                xs12 
+                md6>
+                <v-card
+                    height="300"
+                    color="orange">
+                    <v-card-text>xs4</v-card-text>
+                </v-card>
+            </v-flex>
+            <v-flex 
+                xs12 
+                md6>
+                <v-card
+                    height="300"
+                    color="teal">
+                    <v-card-text>xs4</v-card-text>
+                </v-card>
+            </v-flex>
+        </v-layout>
+    </v-container>
 </template>
 
 <script>
-import * as d3 from 'd3';
+import D3BarChart from './components/d3-bar-chart.vue';
 
 export default {
     name: 'D3BasicBarCharts',
+    components: {
+        D3BarChart
+    },
     data () {
         return {
             series: [5, 8, 9, 10, 12, 15]
         };
-    },
-    mounted () {
-        d3
-            .select(this.$refs.chart)
-            .selectAll('div')
-            .data(this.series)
-            .enter()
-            .append('div')
-            .style('width', value => `${value * 20}px`)
-            .text(value => value);
     }
 };
 </script>
-
-<style>
-.chart div {
-    font: 12px sans-serif;
-    background-color: steelblue;
-    text-align: right;
-    padding: 3px;
-    margin: 1px;
-    color: white;
-}
-</style>

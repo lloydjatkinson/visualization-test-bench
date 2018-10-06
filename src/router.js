@@ -32,6 +32,11 @@ export default new Router({
             path: '/d3-basic-bar-chart',
             name: 'd3-basic-bar-chart',
             component: () => import('./sections/d3-basic-bar-charts/d3-basic-bar-charts.vue')
+        },
+        {
+            path: '/basic-mapbox-gl',
+            name: 'basic-mapbox-gl',
+            component: () => import('./sections/basic-mapbox-gl/basic-mapbox-gl.vue')
         }
     ]
 });

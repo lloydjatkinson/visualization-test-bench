@@ -1,8 +1,8 @@
 <template>
-    <v-content>
+    <v-content class="pt-3">
         <v-container 
-            fluid 
-            grid-list-md>
+            grid-list-xs 
+            fluid>
             <v-layout
                 row
                 wrap>
@@ -16,16 +16,17 @@
                         :alert-type="'warning'"
                         :details="warningCondition.details" />
                 </v-flex>
-                <v-flex xs12>
-                    <v-scale-transition
-                        appear
-                        mode="out-in">
-                        <router-view />
-                    </v-scale-transition>
-
-                </v-flex>
             </v-layout>
         </v-container>
+        <v-layout>
+            <v-flex xs12>
+                <v-scale-transition
+                    appear
+                    mode="out-in">
+                    <router-view />
+                </v-scale-transition>
+            </v-flex>
+        </v-layout>
     </v-content>
 </template>
 

@@ -8,7 +8,7 @@
             flat
             @click="dismissSnackbar">
             {{ snackbarDismissText }}
-      </v-btn>
+        </v-btn>
     </v-snackbar>
 </template>
 

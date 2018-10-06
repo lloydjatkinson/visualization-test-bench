@@ -15,6 +15,7 @@ const technologyIconMap = new Map([
     [ 'vuejs', { name: 'Vue.js', icon: 'mdi-vuejs', colour: '#42B883' }],
     [ 'chromajs', { name: 'Chroma.js', icon: 'mdi-palette', colour: '#ff3399' } ],
     [ 'd3', { name: 'D3.js', icon: 'mdi-chart-scatterplot-hexbin', colour: '#F68849' }],
+    [ 'mapboxgl', { name: 'Mapbox GL', icon: 'mdi-map', colour: '#F68849' }],
     [ 'about', { name: 'About', icon: 'dictionary' }]
 ]);
 

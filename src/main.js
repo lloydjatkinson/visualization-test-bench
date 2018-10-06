@@ -28,6 +28,10 @@ router.afterEach(() => {
     }, 150);
 });
 
+router.onError(() => {
+    store.dispatch('applicationShellModule/showSnackbar', { message: 'Unable to load section' });
+});
+
 Vue.config.productionTip = false;
 new Vue({
     router,
