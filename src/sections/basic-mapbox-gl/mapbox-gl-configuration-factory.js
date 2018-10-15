@@ -35,7 +35,7 @@ const buildMapConfiguration = ({ accessToken, container, center = [8, 50] }) => 
             'source-layer': 'building',
             'filter': ['==', 'extrude', 'true'],
             'type': 'fill-extrusion',
-            'minzoom': 15,
+            'minzoom': 12,
             'paint': {
                 'fill-extrusion-color': '#aaa',
 

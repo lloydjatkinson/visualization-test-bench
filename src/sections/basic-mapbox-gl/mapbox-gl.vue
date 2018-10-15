@@ -1,7 +1,10 @@
 <template>
-    <div
-        ref="map"
-        class="map-size" />
+    <div>
+        <div
+            ref="map"
+            class="map-size" />
+
+    </div>
 </template>
 
 <script>

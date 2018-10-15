@@ -49,12 +49,5 @@ export default {
 </script>
 
 <style>
-.map {
-    position: absolute;
-    top: 150px;
-    bottom: 25px;
-    width: 96%;
-    display: inline-block;
-    /* height: 600px; */
-}
+
 </style>

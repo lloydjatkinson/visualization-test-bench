@@ -16,20 +16,20 @@
     "nprogress": "^0.2.0",
     "vue": "^2.5.17",
     "vue-router": "^3.0.1",
-    "vuetify": "^1.2.6",
+    "vuetify": "^1.2.9",
     "vuex": "^3.0.1"
   },
   "devDependencies": {
     "@mdi/font": "^2.8.94",
-    "@vue/cli-plugin-babel": "^3.0.4",
-    "@vue/cli-plugin-eslint": "^3.0.4",
-    "@vue/cli-plugin-unit-jest": "^3.0.4",
-    "@vue/cli-service": "^3.0.4",
+    "@vue/cli-plugin-babel": "^3.0.5",
+    "@vue/cli-plugin-eslint": "^3.0.5",
+    "@vue/cli-plugin-unit-jest": "^3.0.5",
+    "@vue/cli-service": "^3.0.5",
     "@vue/test-utils": "^1.0.0-beta.20",
     "babel-core": "7.0.0-bridge.0",
     "babel-jest": "^23.0.1",
     "material-design-icons-iconfont": "^3.0.3",
-    "node-sass": "^4.9.0",
+    "node-sass": "^4.9.4",
     "sass-loader": "^7.0.1",
     "vue-template-compiler": "^2.5.17"
   }
