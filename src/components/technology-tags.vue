@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <div v-if="technologies.length > 0">
         <v-chip
             v-for="item in mappedIcons"
             :key="item.icon">
@@ -10,7 +10,7 @@
 </template>
 
 <script>
-const technologyIconMap = new Map([
+const technologyMap = new Map([
     [ 'js', { name: 'Javascript', icon: 'mdi-language-javascript', colour: '#F7DF1E' }],
     [ 'vuejs', { name: 'Vue.js', icon: 'mdi-vuejs', colour: '#42B883' }],
     [ 'chromajs', { name: 'Chroma.js', icon: 'mdi-palette', colour: '#ff3399' } ],
@@ -20,7 +20,7 @@ const technologyIconMap = new Map([
 ]);
 
 export default {
-    name: 'TechnologyChip',
+    name: 'TechnologyTags',
     props: {
         technologies: {
             type: Array,
@@ -30,8 +30,22 @@ export default {
     computed: {
         mappedIcons () {
             return this.technologies
-                .filter(item => item)
-                .map(item => technologyIconMap.get(item));
+                .filter(tag => tag || tag !== '')
+                .map(tag => {
+                    const foundTag = technologyMap.get(tag);
+
+                    if (foundTag) {
+                        return {
+                            name: foundTag.name,
+                            icon: foundTag.icon
+                        };
+                    } else {
+                        return {
+                            name: tag,
+                            icon: undefined
+                        };
+                    }
+                });
         }
     }
 };

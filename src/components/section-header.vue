@@ -3,16 +3,16 @@
         <h4 class="title font-weight-light pb-2">
             {{ title }}
         </h4>
-        <technology-chips :technologies="technologies" />
+        <technology-tags :technologies="technologies" />
     </div>
 </template>
 
 <script>
-import TechnologyChips from './technology-chips.vue';
+import TechnologyTags from './technology-tags.vue';
 export default {
     name: 'SectionHeader',
     components: {
-        TechnologyChips
+        TechnologyTags
     },
     props: {
         title: {
