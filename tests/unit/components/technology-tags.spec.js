@@ -1,4 +1,4 @@
-import { createLocalVue, mount, shallowMount } from '@vue/test-utils';
+import { mount, shallowMount } from '@vue/test-utils';
 import Vuetify from 'vuetify';
 import TechnologyTags from '@/components/technology-tags.vue';
 import Vue from 'vue';
@@ -55,7 +55,6 @@ describe('technology-tags.vue', () => {
     });
 
     it('should not render anything if given an empty tag collection', () => {
-        const tags = ['js', 'vuejs', 'abc'];
         const wrapper = mount(TechnologyTags, {
             propsData: {
                 technologies: []
