@@ -7,6 +7,7 @@ import '../node_modules/nprogress/nprogress.css';
 
 import store from './store.js';
 import router from './router.js';
+import './registerServiceWorker';
 
 import ApplicationShell from './application-shell/components/application-shell.vue';
 import SectionHeader from './components/section-header.vue';
@@ -46,7 +47,7 @@ new Vue({
 // Vue.config.errorHandler = (error, vm, info) => {
 //     console.warn('Oops.');
 // };
-    
+
 // Vue.config.warnHandler = (message, vm, trace) => {
 //     console.warn('More oops.');
 // };
